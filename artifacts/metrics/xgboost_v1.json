@@ -1,0 +1,9 @@
+{
+  "modelo":"XGBoost (datos crudos)",
+  "n_variables":24,
+  "n_arboles":97,
+  "auc_val":0.86854,
+  "auc_cv_media":0.86628,
+  "auc_cv_desv":0.00306,
+  "ks_val":0.58323
+}

@@ -1,0 +1,10 @@
+{
+  "modelo":"LightGBM (datos crudos)",
+  "n_variables":24,
+  "n_arboles":108,
+  "auc_val":0.86905,
+  "auc_cv_media":0.86619,
+  "auc_cv_desv":0.00343,
+  "ks_val":0.58848,
+  "error_calibracion_pp":0.358
+}

@@ -1,0 +1,61 @@
+# =============================================================================
+# Give Me Some Credit (PD) — .gitignore
+# =============================================================================
+# REGLA: al repositorio va el CODIGO, no lo que el codigo produce.
+# Todo lo ignorado aqui se regenera ejecutando los scripts en orden:
+#     01_eda.py -> 02_preprocessing.py -> 03..07
+# =============================================================================
+
+# --- Datos procesados (~14 MB) — los regenera 02_preprocessing.py ------------
+datasets/
+
+# --- Modelos y transformadores (~6 MB) — los regeneran 02..05 ----------------
+artifacts/models/
+artifacts/preprocessors/
+
+# --- Submissions — las regenera 06_evaluation.py -----------------------------
+artifacts/submissions/
+
+# --- Graficas: SI se versionan ------------------------------------------------
+# Se publican para que los resultados se vean en GitHub sin ejecutar nada.
+
+# --- Metricas: SI se versionan ------------------------------------------------
+# Son ficheros pequenos de texto y documentan los resultados publicados.
+!artifacts/metrics/
+
+# --- Python -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- Herramientas -------------------------------------------------------------
+.pytest_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# --- Editores y sistema -------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Datos originales y archivos comprimidos
+*.csv
+*.csv.gz
+*.parquet
+*.zip
+
+# Credenciales y configuraciones privadas
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Registros de ejecución
+*.log
